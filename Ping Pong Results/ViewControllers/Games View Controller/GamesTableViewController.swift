@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class GamesTableViewController: UITableViewController {
+class GamesTableViewController: NoDataTableViewController {
 	
 	// MARK: - Variables
 	
@@ -17,6 +17,7 @@ class GamesTableViewController: UITableViewController {
 		didSet {
 			tableView.reloadData()
 			checkIfUserLoggedInAndUpdateNavigationBarButtons()
+			checkIfDataExistAndShowEmptyViewIfNeeded()
 		}
 	}
 	
@@ -54,6 +55,15 @@ class GamesTableViewController: UITableViewController {
 	}
 	
 	// MARK: - Actions
+	
+	func checkIfDataExistAndShowEmptyViewIfNeeded() {
+		if games.count == 0 {
+			noDataLabelView.isHidden = false
+		} else {
+			noDataLabelView.isHidden = true
+		}
+		noDataLabel?.text = "No games added yet!"
+	}
 	
 	@objc func signIn() {
 		AuthenticationManager.shared.presentLoginInView(presentingViewController: self) { (user, error) in

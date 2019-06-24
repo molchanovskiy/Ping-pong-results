@@ -79,9 +79,10 @@ class AppManager {
 	
 	/**
 	Populates test Games objects and stores them to Realm database
+	- warning: only populates test data if user logged in to avoid storing test data to real user
 	*/
 	private func populateTestData() {
-		if let games = RealmManager.shared.getObjectsWith(type: Game.self), games.count == 0 {
+		if let games = RealmManager.shared.getObjectsWith(type: Game.self), games.count == 0, !AuthenticationManager.shared.isLoggedIn() {
 			var newGames:[Game] = []
 			RealmManager.shared.write {
 				let defaultFirstPlayers:[String] = ["Darcis S.", "Oliveira G.", "Troicki V.", "Aragone J.", "Kecmanovic M.", "Londero J. I.", "Rublev A.", "Bublik A.", "Kudla D.", "Federer R.", "Darcis S.", "Gomez-Herrera C.", "Ortega-Olmedo R.", "Krawietz K."]

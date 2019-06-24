@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PlayersTableViewController: UITableViewController {
+class PlayersTableViewController: NoDataTableViewController {
 	
 	// MARK: - Variables
 	
@@ -30,9 +30,19 @@ class PlayersTableViewController: UITableViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		players = AppManager.shared.getPlayers(sorted: playersSortType)
+		checkIfDataExistAndShowEmptyViewIfNeeded()
 	}
 	
 	//MARK: - Actions
+	
+	func checkIfDataExistAndShowEmptyViewIfNeeded() {
+		if players.count == 0 {
+			noDataLabelView.isHidden = false
+		} else {
+			noDataLabelView.isHidden = true
+		}
+		noDataLabel?.text = "No players added yet!"
+	}
 	
 	@objc func sortButtonDidTap(_ sender: Any) {
 		let alert = UIAlertController.init(title: "Sort by:", message: nil, preferredStyle: .actionSheet)

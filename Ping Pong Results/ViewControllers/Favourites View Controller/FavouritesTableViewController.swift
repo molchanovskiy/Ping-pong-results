@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FavouritesTableViewController: UITableViewController {
+class FavouritesTableViewController: NoDataTableViewController {
 	
 	// MARK: - Variables
 	
@@ -17,43 +17,6 @@ class FavouritesTableViewController: UITableViewController {
 			tableView.reloadData()
 		}
 	}
-	
-	lazy var noDataLabelView: UIView = {
-		let label = UILabel()
-		
-		// Enable Dynamic Type:
-		label.font = UIFont.preferredFont(forTextStyle: .callout)
-		label.adjustsFontForContentSizeCategory = true
-		
-		// Style label with white text:
-		label.textColor = .white
-		label.backgroundColor = .clear
-		label.text = "No favorites added yet!"
-		
-		// Style a grey background with rounded corners:
-		let noDataView = UIView()
-		noDataView.isHidden = true
-		noDataView.backgroundColor = UIColor.darkGray
-		noDataView.layer.cornerRadius = 4
-		noDataView.layer.masksToBounds = true
-		
-		// Set constraints of view around label:
-		noDataView.addSubview(label)
-		label.translatesAutoresizingMaskIntoConstraints = false
-		noDataView.addConstraint(NSLayoutConstraint(item: label, attribute: .leading, relatedBy: .equal, toItem: noDataView, attribute: .leading, multiplier: 1.0, constant: 12))
-		noDataView.addConstraint(NSLayoutConstraint(item: noDataView, attribute: .trailing, relatedBy: .equal, toItem: label, attribute: .trailing, multiplier: 1.0, constant: 12))
-		noDataView.addConstraint(NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: noDataView, attribute: .top, multiplier: 1.0, constant: 6))
-		noDataView.addConstraint(NSLayoutConstraint(item: noDataView, attribute: .bottom, relatedBy: .equal, toItem: label, attribute: .bottom, multiplier: 1.0, constant: 6))
-		
-		// Set constraints to position view at top of tableview:
-		self.tableView.addSubview(noDataView)
-		noDataView.translatesAutoresizingMaskIntoConstraints = false
-		self.tableView.addConstraint(NSLayoutConstraint(item: noDataView, attribute: .centerX, relatedBy: .equal, toItem: self.tableView, attribute: .centerX, multiplier: 1.0, constant: 0))
-		self.tableView.addConstraint(NSLayoutConstraint(item: noDataView, attribute: .width, relatedBy: .lessThanOrEqual, toItem: self.tableView, attribute: .width, multiplier: 0.92, constant: 0))
-		self.tableView.addConstraint(NSLayoutConstraint(item: noDataView, attribute: .top, relatedBy: .equal, toItem: self.tableView, attribute: .top, multiplier: 1.0, constant: 40))
-		
-		return noDataView
-	}()
 	
 	// MARK: - View Controller life-cycle
 	
@@ -82,6 +45,7 @@ class FavouritesTableViewController: UITableViewController {
 		} else {
 			noDataLabelView.isHidden = true
 		}
+		noDataLabel?.text = "No favorites added yet!"
 	}
 	
 	func checkEditingState() {
