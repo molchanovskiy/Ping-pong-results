@@ -7,100 +7,114 @@
 //
 
 import UIKit
+import RealmSwift
 
 class GamesTableViewController: UITableViewController {
-
+	
 	// MARK: - Variables
 	
 	var games:[Game] = AppManager.shared.getGameObjects() {
 		didSet {
 			tableView.reloadData()
+			checkIfUserLoggedInAndUpdateNavigationBarButtons()
 		}
 	}
 	
 	// MARK: - View Controller life-cycle
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	override func viewDidLoad() {
+		super.viewDidLoad()
 		//set view controllers navigation bar title
 		title = "Games"
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
+		checkIfUserLoggedInAndUpdateNavigationBarButtons()
 		games = AppManager.shared.getGameObjects()
 	}
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return games.count
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+	}
+	
+	// MARK: - Functions
+	
+	func checkIfUserLoggedInAndUpdateNavigationBarButtons() {
+		
+		if AuthenticationManager.shared.isLoggedIn() {
+			let signOutButton = UIBarButtonItem.init(image: #imageLiteral(resourceName: "sign_out_icon"), style: .plain, target: self, action: #selector(signOut))
+			navigationItem.leftBarButtonItems = nil
+			navigationItem.leftBarButtonItem = signOutButton
+		} else {
+			let signInButton = UIBarButtonItem.init(image: #imageLiteral(resourceName: "sign_in_icon"), style: .plain, target: self, action: #selector(signIn))
+			let signUpButton = UIBarButtonItem.init(image: #imageLiteral(resourceName: "sign_up_icon"), style: .plain, target: self, action: #selector(signUp))
+			navigationItem.leftBarButtonItems = [signInButton, signUpButton]
+		}
+	}
+	
+	// MARK: - Actions
+	
+	@objc func signIn() {
+		AuthenticationManager.shared.presentLoginInView(presentingViewController: self) { (user, error) in
+			if user != nil {
+				RealmManager.shared.checkIfUserLoggedInAndUpdateRealmInstanseIfNeeded()
+				self.games = AppManager.shared.getGameObjects()
+			} else if let error = error {
+				self.presentError(text: error.localizedDescription)
+			}
+		}
+	}
+	
+	@objc func signUp() {
+		AuthenticationManager.shared.presentLoginInView(presentingViewController: self, createAccount: true) { (user, error) in
+			if user != nil {
+				RealmManager.shared.checkIfUserLoggedInAndUpdateRealmInstanseIfNeeded()
+				self.games = AppManager.shared.getGameObjects()
+			} else if let error = error {
+				self.presentError(text: error.localizedDescription)
+			}
+		}
+	}
+	
+	@objc func signOut() {
+		AuthenticationManager.shared.signOut(presentingViewController: self) { (result) in
+			if result {
+				self.games = AppManager.shared.getGameObjects()
+			}
+		}
+	}
+	
+	func presentError(text:String) {
+		let alertViewController = UIAlertController.init(title: "Oooopds!", message: text, preferredStyle: .alert)
+		alertViewController.addAction(UIAlertAction.init(title: "OK", style: .cancel))
+		present(alertViewController, animated: true)
+	}
+	
+	// MARK: - Table view data source
+	
+	override func numberOfSections(in tableView: UITableView) -> Int {
+		// #warning Incomplete implementation, return the number of sections
+		return 1
+	}
+	
+	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		// #warning Incomplete implementation, return the number of rows
+		return games.count
+	}
+	
+	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell:GameTableViewCell = tableView.dequeueReusableCell(withIdentifier: GameTableViewCell.className, for: indexPath) as! GameTableViewCell
 		let game = games[indexPath.row]
-        // Configure the cell...
+		// Configure the cell...
 		cell.populate(game: game)
 		
-        return cell
-    }
-
+		return cell
+	}
+	
 	// MARK: - Table view delegate
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
 	}
-	
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

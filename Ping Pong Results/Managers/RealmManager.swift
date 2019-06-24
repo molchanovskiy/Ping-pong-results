@@ -10,13 +10,40 @@ import UIKit
 import RealmSwift
 
 class RealmManager {
-
+	
 	// MARK: - Variables
 	
 	static let shared = RealmManager()
-	var realm: Realm = try! Realm()
+	var realm: Realm
+	
+	
+	
+	init() {
+		let configuration = Realm.Configuration(
+			schemaVersion: 1,
+			migrationBlock: { migration, oldSchemaVersion in
+				if oldSchemaVersion < 1 {
+					// if you added a new property or removed a property you don't
+					// have to do anything because Realm automatically detects that
+				}
+		})
+		Realm.Configuration.defaultConfiguration = configuration
+		
+		// opening the Realm file now makes sure that the migration is performed
+		self.realm = try! Realm()
+		
+		checkIfUserLoggedInAndUpdateRealmInstanseIfNeeded()
+	}
 	
 	// MARK: - Functions
+	/**
+	Checks if there is logged in Realm user and updates realm instanse.
+	*/
+	func checkIfUserLoggedInAndUpdateRealmInstanseIfNeeded() {
+		if let config = SyncUser.current?.configuration(realmURL: Constants.REALM_URL, fullSynchronization: true) {
+			self.realm = try! Realm(configuration: config)
+		}
+	}
 	
 	/**
 	Adds an unmanaged object to this Realm.

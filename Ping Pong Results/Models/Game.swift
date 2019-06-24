@@ -20,6 +20,7 @@ class Game: Object {
 	@objc dynamic var secondPlayerScore:Int = 0
 	@objc dynamic var date:Date = Date()
 	@objc dynamic var favourite:Bool = false
+	@objc dynamic var itemId: String = UUID().uuidString
 	
 	// MARK: - Initialization
 	
@@ -52,6 +53,10 @@ class Game: Object {
 		firstPlayer.incrementPoints(points: firstPlayerScore)
 		secondPlayer.incrementPoints(points: secondPlayerScore)
 	}
+	
+	override static func primaryKey() -> String? {
+		return "itemId"
+	}
 }
 
 enum PlayerScore {
@@ -73,6 +78,7 @@ class Player: Object {
 	@objc dynamic var points = 0
 	@objc dynamic var totalWins = 0
 	@objc dynamic var totalLosses = 0
+	@objc dynamic var itemId: String = UUID().uuidString
 	
 	// MARK: - Initialization
 	
@@ -110,5 +116,9 @@ class Player: Object {
 	*/
 	func incrementPoints(points:Int) {
 		self.points = self.points + points
+	}
+	
+	override static func primaryKey() -> String? {
+		return "itemId"
 	}
 }

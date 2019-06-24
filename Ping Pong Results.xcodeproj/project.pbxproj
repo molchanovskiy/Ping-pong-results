@@ -25,6 +25,8 @@
 		03EAF4E122C0F64F00918011 /* AddGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4E022C0F64F00918011 /* AddGameViewController.swift */; };
 		03EAF4E422C101F000918011 /* FavouritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4E322C101F000918011 /* FavouritesTableViewController.swift */; };
 		03EAF4E622C1020600918011 /* FavouriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4E522C1020600918011 /* FavouriteTableViewCell.swift */; };
+		03EAF4E922C158E100918011 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4E822C158E100918011 /* Constants.swift */; };
+		03EAF4EB22C15CDB00918011 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4EA22C15CDB00918011 /* AuthenticationManager.swift */; };
 		B5B2067904CAAB50FEC2DE5A /* Pods_Ping_Pong_ResultsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB70942F0AE39BBD13A36BD1 /* Pods_Ping_Pong_ResultsTests.framework */; };
 		CE519DD2061F79083053E43B /* Pods_Ping_Pong_Results.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEF270EB6063BFCE5F7F452 /* Pods_Ping_Pong_Results.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +65,8 @@
 		03EAF4E022C0F64F00918011 /* AddGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameViewController.swift; sourceTree = "<group>"; };
 		03EAF4E322C101F000918011 /* FavouritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTableViewController.swift; sourceTree = "<group>"; };
 		03EAF4E522C1020600918011 /* FavouriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteTableViewCell.swift; sourceTree = "<group>"; };
+		03EAF4E822C158E100918011 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		03EAF4EA22C15CDB00918011 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		163AB9283CB4BE40103B33B2 /* Pods-Ping Pong ResultsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ping Pong ResultsTests.release.xcconfig"; path = "Target Support Files/Pods-Ping Pong ResultsTests/Pods-Ping Pong ResultsTests.release.xcconfig"; sourceTree = "<group>"; };
 		7DEF270EB6063BFCE5F7F452 /* Pods_Ping_Pong_Results.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ping_Pong_Results.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		951F6276930A1894325C40AE /* Pods-Ping Pong ResultsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ping Pong ResultsTests.debug.xcconfig"; path = "Target Support Files/Pods-Ping Pong ResultsTests/Pods-Ping Pong ResultsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				03EAF49722C0ADA800918011 /* AppDelegate.swift */,
+				03EAF4E822C158E100918011 /* Constants.swift */,
 				03EAF49B22C0ADA800918011 /* Main.storyboard */,
 				03EAF49E22C0ADA900918011 /* Assets.xcassets */,
 				03EAF4C822C0C3C300918011 /* ViewControllers */,
@@ -138,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				03EAF4DB22C0C72900918011 /* AppManager.swift */,
+				03EAF4EA22C15CDB00918011 /* AuthenticationManager.swift */,
 				03EAF4AD22C0B26B00918011 /* RealmManager.swift */,
 			);
 			path = Managers;
@@ -433,6 +439,7 @@
 				03EAF4DE22C0D97600918011 /* Realm+Result.swift in Sources */,
 				03EAF4D422C0C4B100918011 /* GameTableViewCell.swift in Sources */,
 				03EAF4DC22C0C72900918011 /* AppManager.swift in Sources */,
+				03EAF4EB22C15CDB00918011 /* AuthenticationManager.swift in Sources */,
 				03EAF4D222C0C46F00918011 /* GamesTableViewController.swift in Sources */,
 				03EAF4DA22C0C5C100918011 /* NSObjectAdditions.swift in Sources */,
 				03EAF4E422C101F000918011 /* FavouritesTableViewController.swift in Sources */,
@@ -441,6 +448,7 @@
 				03EAF4E122C0F64F00918011 /* AddGameViewController.swift in Sources */,
 				03EAF49822C0ADA800918011 /* AppDelegate.swift in Sources */,
 				03EAF4E622C1020600918011 /* FavouriteTableViewCell.swift in Sources */,
+				03EAF4E922C158E100918011 /* Constants.swift in Sources */,
 				03EAF4B022C0B79B00918011 /* Game.swift in Sources */,
 				03EAF4AE22C0B26B00918011 /* RealmManager.swift in Sources */,
 			);
