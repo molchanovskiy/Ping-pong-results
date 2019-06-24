@@ -10,14 +10,17 @@ import UIKit
 
 class GamesTableViewController: UITableViewController {
 
+	// MARK: - Variables
+	
+	let games:[Game] = AppManager.shared.getGamesObjects()
+	
 	// MARK: - View Controller life-cycle
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 		//set view controllers navigation bar title
 		title = "Games"
-		
-    }
+	}
 
     // MARK: - Table view data source
 
@@ -28,15 +31,16 @@ class GamesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return games.count
     }
 
 	
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell:GameTableViewCell = tableView.dequeueReusableCell(withIdentifier: GameTableViewCell.className, for: indexPath) as! GameTableViewCell
-
+		let game = games[indexPath.row]
         // Configure the cell...
-
+		cell.populate(game: game)
+		
         return cell
     }
 

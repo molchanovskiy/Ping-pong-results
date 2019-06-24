@@ -18,6 +18,7 @@ class Game: Object {
 	@objc dynamic var secondPlayer:Player!
 	@objc dynamic var secondPlayerScore:Int = 0
 	@objc dynamic var date:Date = Date()
+	@objc dynamic var favourite:Bool = false
 	
 	// MARK: - Initialization
 	

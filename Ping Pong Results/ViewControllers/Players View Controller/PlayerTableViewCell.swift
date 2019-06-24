@@ -10,7 +10,12 @@ import UIKit
 
 class PlayerTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
+	// MARK: - Variables
+	
+	@IBOutlet weak var playerNameLabel: UILabel!
+	@IBOutlet weak var playerPointsLabel: UILabel!
+	
+	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
@@ -20,5 +25,10 @@ class PlayerTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+	
+	func populate(player:Player) {
+		playerNameLabel.text = player.name
+		playerPointsLabel.text = "\(player.points)"
+	}
 
 }
