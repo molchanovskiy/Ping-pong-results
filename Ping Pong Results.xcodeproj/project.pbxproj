@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		03EAF49822C0ADA800918011 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF49722C0ADA800918011 /* AppDelegate.swift */; };
-		03EAF49A22C0ADA800918011 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF49922C0ADA800918011 /* ViewController.swift */; };
 		03EAF49D22C0ADA800918011 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03EAF49B22C0ADA800918011 /* Main.storyboard */; };
 		03EAF49F22C0ADA900918011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03EAF49E22C0ADA900918011 /* Assets.xcassets */; };
 		03EAF4A222C0ADAA00918011 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03EAF4A022C0ADA900918011 /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		03EAF49422C0ADA800918011 /* Ping Pong Results.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ping Pong Results.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03EAF49722C0ADA800918011 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		03EAF49922C0ADA800918011 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		03EAF49C22C0ADA800918011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03EAF49E22C0ADA900918011 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03EAF4A122C0ADA900918011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,13 +53,36 @@
 			isa = PBXGroup;
 			children = (
 				03EAF49722C0ADA800918011 /* AppDelegate.swift */,
-				03EAF49922C0ADA800918011 /* ViewController.swift */,
 				03EAF49B22C0ADA800918011 /* Main.storyboard */,
+				03EAF4AA22C0ADE000918011 /* ViewControllers */,
+				03EAF4A922C0ADE000918011 /* Models */,
+				03EAF4AB22C0ADE000918011 /* Resources */,
 				03EAF49E22C0ADA900918011 /* Assets.xcassets */,
 				03EAF4A022C0ADA900918011 /* LaunchScreen.storyboard */,
 				03EAF4A322C0ADAA00918011 /* Info.plist */,
 			);
 			path = "Ping Pong Results";
+			sourceTree = "<group>";
+		};
+		03EAF4A922C0ADE000918011 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		03EAF4AA22C0ADE000918011 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		03EAF4AB22C0ADE000918011 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +156,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03EAF49A22C0ADA800918011 /* ViewController.swift in Sources */,
 				03EAF49822C0ADA800918011 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
