@@ -43,11 +43,11 @@ class Game: Object {
 		//check if first player won, increment total wins and increment second player total losses
 		if firstPlayerScore > secondPlayerScore {
 			firstPlayer.incrementTotalScore(scoreType: .win)
-			secondPlayer.incrementTotalScore(scoreType: .lose)
+			secondPlayer.incrementTotalScore(scoreType: .losse)
 		//check if second player won, increment total wins and increment first player total losses
 		} else if secondPlayerScore > firstPlayerScore {
 			secondPlayer.incrementTotalScore(scoreType: .win)
-			firstPlayer.incrementTotalScore(scoreType: .lose)
+			firstPlayer.incrementTotalScore(scoreType: .losse)
 		}
 		firstPlayer.incrementPoints(points: firstPlayerScore)
 		secondPlayer.incrementPoints(points: secondPlayerScore)
@@ -56,7 +56,7 @@ class Game: Object {
 
 enum PlayerScore {
 	case win
-	case lose
+	case losse
 }
 
 enum PlayerSorting {
@@ -98,7 +98,7 @@ class Player: Object {
 		switch scoreType {
 		case .win:
 			totalWins = totalWins + 1
-		case .lose:
+		case .losse:
 			totalLosses = totalLosses + 1
 		}
 	}

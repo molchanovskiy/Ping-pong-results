@@ -14,7 +14,6 @@
 		03EAF4AE22C0B26B00918011 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4AD22C0B26B00918011 /* RealmManager.swift */; };
 		03EAF4B022C0B79B00918011 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4AF22C0B79B00918011 /* Game.swift */; };
 		03EAF4B822C0BCCD00918011 /* Ping_Pong_ResultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4B722C0BCCD00918011 /* Ping_Pong_ResultsTests.swift */; };
-		03EAF4C322C0BFA600918011 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4AF22C0B79B00918011 /* Game.swift */; };
 		03EAF4C522C0C05300918011 /* unit_game_player_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4C422C0C05300918011 /* unit_game_player_test.swift */; };
 		03EAF4D022C0C45200918011 /* PlayersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4CF22C0C45200918011 /* PlayersTableViewController.swift */; };
 		03EAF4D222C0C46F00918011 /* GamesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4D122C0C46F00918011 /* GamesTableViewController.swift */; };
@@ -157,10 +156,10 @@
 		03EAF4C822C0C3C300918011 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				03EAF4E222C101CE00918011 /* Favourites View Controller */,
 				03EAF4CB22C0C41C00918011 /* Games View Controller */,
 				03EAF4CE22C0C43500918011 /* Players View Controller */,
 				03EAF4DF22C0F63400918011 /* Add Game View Controller */,
+				03EAF4E222C101CE00918011 /* Favourites View Controller */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -452,7 +451,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				03EAF4B822C0BCCD00918011 /* Ping_Pong_ResultsTests.swift in Sources */,
-				03EAF4C322C0BFA600918011 /* Game.swift in Sources */,
 				03EAF4C522C0C05300918011 /* unit_game_player_test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
