@@ -112,11 +112,11 @@
 			children = (
 				03EAF49722C0ADA800918011 /* AppDelegate.swift */,
 				03EAF49B22C0ADA800918011 /* Main.storyboard */,
+				03EAF49E22C0ADA900918011 /* Assets.xcassets */,
 				03EAF4C822C0C3C300918011 /* ViewControllers */,
 				03EAF4AC22C0B25700918011 /* Managers */,
 				03EAF4A922C0ADE000918011 /* Models */,
 				03EAF4D822C0C5AB00918011 /* Extensions */,
-				03EAF49E22C0ADA900918011 /* Assets.xcassets */,
 				03EAF4A022C0ADA900918011 /* LaunchScreen.storyboard */,
 				03EAF4A322C0ADAA00918011 /* Info.plist */,
 			);

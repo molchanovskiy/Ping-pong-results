@@ -14,6 +14,8 @@ class PlayerTableViewCell: UITableViewCell {
 	
 	@IBOutlet weak var playerNameLabel: UILabel!
 	@IBOutlet weak var playerPointsLabel: UILabel!
+	@IBOutlet weak var playerLossesLabel: UILabel!
+	@IBOutlet weak var playerWinsLabel: UILabel!
 	
 	override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,6 +31,8 @@ class PlayerTableViewCell: UITableViewCell {
 	func populate(player:Player) {
 		playerNameLabel.text = player.name
 		playerPointsLabel.text = "\(player.points)"
+		playerLossesLabel.text = "\(player.totalLosses)"
+		playerWinsLabel.text = "\(player.totalWins)"
 	}
 
 }

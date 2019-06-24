@@ -50,12 +50,18 @@ class Game: Object {
 	}
 }
 
+enum PlayerScore {
+	case win
+	case lose
+}
+
+enum PlayerSorting {
+	case wins
+	case losses
+	case points
+}
+
 class Player: Object {
-	
-	enum PlayerScore {
-		case win
-		case lose
-	}
 	
 	// MARK: - Variables
 	

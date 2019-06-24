@@ -36,13 +36,26 @@ class AppManager {
 	}
 	
 	/**
-	Returns Player objects array sorted by player points.
+	Returns Player objects array sorted by PlayerSorting value.
+	
+	- parameter sorted: optional value to sort players by points, wins or losses, default is points
 	*/
-	func getPlayersSorterByPoints() -> [Player] {
+	func getPlayers(sorted:PlayerSorting = .points) -> [Player] {
 		if let players = RealmManager.shared.getObjectsWith(type: Player.self)?.toArray(ofType: Player.self), players.count > 0 {
-			return players.sorted(by: { (player1, player2) -> Bool in
-				return player1.points > player2.points
-			})
+			switch sorted {
+			case .wins:
+				return players.sorted(by: { (player1, player2) -> Bool in
+					return player1.totalWins > player2.totalWins
+				})
+			case .losses:
+				return players.sorted(by: { (player1, player2) -> Bool in
+					return player1.totalLosses > player2.totalLosses
+				})
+			case .points:
+				return players.sorted(by: { (player1, player2) -> Bool in
+					return player1.points > player2.points
+				})
+			}
 		} else {
 			return []
 		}

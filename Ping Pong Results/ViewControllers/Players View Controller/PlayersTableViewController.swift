@@ -12,7 +12,11 @@ class PlayersTableViewController: UITableViewController {
 
 	// MARK: - Variables
 	
-	let players:[Player] = AppManager.shared.getPlayersSorterByPoints()
+	var players:[Player] = AppManager.shared.getPlayers() {
+		didSet {
+			tableView.reloadData()
+		}
+	}
 	
 	// MARK: - View Controller life-cycle
 	
@@ -21,7 +25,26 @@ class PlayersTableViewController: UITableViewController {
         //set view controllers navigation bar title
 		title = "Players"
     }
-
+	
+	//MARK: - Actions
+	
+	@IBAction func sortButtonDidTap(_ sender: Any) {
+		let alert = UIAlertController.init(title: "Sort by:", message: nil, preferredStyle: .actionSheet)
+		alert.addAction(UIAlertAction.init(title: "Points", style: .default, handler: { (action) in
+			self.players = AppManager.shared.getPlayers(sorted: .points)
+		}))
+		alert.addAction(UIAlertAction.init(title: "Wins", style: .default, handler: { (action) in
+			self.players = AppManager.shared.getPlayers(sorted: .wins)
+		}))
+		alert.addAction(UIAlertAction.init(title: "Losses", style: .default, handler: { (action) in
+			self.players = AppManager.shared.getPlayers(sorted: .losses)
+		}))
+		alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: { (action) in
+			
+		}))
+		present(alert, animated: true)
+	}
+	
 	// MARK: - Table view data source
 	
 	override func numberOfSections(in tableView: UITableView) -> Int {
