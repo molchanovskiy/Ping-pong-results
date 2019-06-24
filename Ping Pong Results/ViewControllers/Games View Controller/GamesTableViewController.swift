@@ -12,7 +12,11 @@ class GamesTableViewController: UITableViewController {
 
 	// MARK: - Variables
 	
-	let games:[Game] = AppManager.shared.getGamesObjects()
+	var games:[Game] = AppManager.shared.getGamesObjects() {
+		didSet {
+			tableView.reloadData()
+		}
+	}
 	
 	// MARK: - View Controller life-cycle
 	
@@ -20,6 +24,11 @@ class GamesTableViewController: UITableViewController {
         super.viewDidLoad()
 		//set view controllers navigation bar title
 		title = "Games"
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		games = AppManager.shared.getGamesObjects()
 	}
 
     // MARK: - Table view data source
@@ -34,7 +43,6 @@ class GamesTableViewController: UITableViewController {
         return games.count
     }
 
-	
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell:GameTableViewCell = tableView.dequeueReusableCell(withIdentifier: GameTableViewCell.className, for: indexPath) as! GameTableViewCell
 		let game = games[indexPath.row]
@@ -44,6 +52,12 @@ class GamesTableViewController: UITableViewController {
         return cell
     }
 
+	// MARK: - Table view delegate
+	
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+	}
+	
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

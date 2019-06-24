@@ -17,6 +17,13 @@ target 'Ping Pong Results' do
 	# ignore all warnings from all pods
 	inhibit_all_warnings!
 	shared_pods
+	
+	# SearchTextField
+	# ==========
+	# Source:     https://github.com/apasccon/SearchTextField
+	# Purpose:    Used to show autocomplete results for players while adding new game
+	pod 'SearchTextField'
+	
 end
 
 target 'Ping Pong ResultsTests' do

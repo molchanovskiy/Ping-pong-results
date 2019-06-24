@@ -38,9 +38,12 @@ class Game: Object {
 		self.secondPlayer = secondPlayer
 		self.secondPlayerScore = secondPlayerScore
 		self.date = date
+		
+		//check if first player won, increment total wins and increment second player total losses
 		if firstPlayerScore > secondPlayerScore {
 			firstPlayer.incrementTotalScore(scoreType: .win)
 			secondPlayer.incrementTotalScore(scoreType: .lose)
+		//check if second player won, increment total wins and increment first player total losses
 		} else if secondPlayerScore > firstPlayerScore {
 			secondPlayer.incrementTotalScore(scoreType: .win)
 			firstPlayer.incrementTotalScore(scoreType: .lose)

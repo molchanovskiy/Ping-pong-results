@@ -24,6 +24,7 @@
 		03EAF4DA22C0C5C100918011 /* NSObjectAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4D922C0C5C100918011 /* NSObjectAdditions.swift */; };
 		03EAF4DC22C0C72900918011 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4DB22C0C72900918011 /* AppManager.swift */; };
 		03EAF4DE22C0D97600918011 /* Realm+Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4DD22C0D97600918011 /* Realm+Result.swift */; };
+		03EAF4E122C0F64F00918011 /* AddGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4E022C0F64F00918011 /* AddGameViewController.swift */; };
 		B5B2067904CAAB50FEC2DE5A /* Pods_Ping_Pong_ResultsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB70942F0AE39BBD13A36BD1 /* Pods_Ping_Pong_ResultsTests.framework */; };
 		CE519DD2061F79083053E43B /* Pods_Ping_Pong_Results.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEF270EB6063BFCE5F7F452 /* Pods_Ping_Pong_Results.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		03EAF4D922C0C5C100918011 /* NSObjectAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectAdditions.swift; sourceTree = "<group>"; };
 		03EAF4DB22C0C72900918011 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		03EAF4DD22C0D97600918011 /* Realm+Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Realm+Result.swift"; sourceTree = "<group>"; };
+		03EAF4E022C0F64F00918011 /* AddGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGameViewController.swift; sourceTree = "<group>"; };
 		163AB9283CB4BE40103B33B2 /* Pods-Ping Pong ResultsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ping Pong ResultsTests.release.xcconfig"; path = "Target Support Files/Pods-Ping Pong ResultsTests/Pods-Ping Pong ResultsTests.release.xcconfig"; sourceTree = "<group>"; };
 		7DEF270EB6063BFCE5F7F452 /* Pods_Ping_Pong_Results.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ping_Pong_Results.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		951F6276930A1894325C40AE /* Pods-Ping Pong ResultsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ping Pong ResultsTests.debug.xcconfig"; path = "Target Support Files/Pods-Ping Pong ResultsTests/Pods-Ping Pong ResultsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			children = (
 				03EAF4CB22C0C41C00918011 /* Games View Controller */,
 				03EAF4CE22C0C43500918011 /* Players View Controller */,
+				03EAF4DF22C0F63400918011 /* Add Game View Controller */,
 				03EAF4C922C0C3D500918011 /* TabBarViewController.swift */,
 			);
 			path = ViewControllers;
@@ -185,6 +188,14 @@
 				03EAF4D922C0C5C100918011 /* NSObjectAdditions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		03EAF4DF22C0F63400918011 /* Add Game View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				03EAF4E022C0F64F00918011 /* AddGameViewController.swift */,
+			);
+			path = "Add Game View Controller";
 			sourceTree = "<group>";
 		};
 		2D500651E838489E7C7E9730 /* Frameworks */ = {
@@ -387,6 +398,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Ping Pong Results/Pods-Ping Pong Results-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm-iOS11.0/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift-iOS11.0/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SearchTextField/SearchTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -394,6 +406,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SearchTextField.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -415,6 +428,7 @@
 				03EAF4DA22C0C5C100918011 /* NSObjectAdditions.swift in Sources */,
 				03EAF4D022C0C45200918011 /* PlayersTableViewController.swift in Sources */,
 				03EAF4D622C0C4BD00918011 /* PlayerTableViewCell.swift in Sources */,
+				03EAF4E122C0F64F00918011 /* AddGameViewController.swift in Sources */,
 				03EAF49822C0ADA800918011 /* AppDelegate.swift in Sources */,
 				03EAF4B022C0B79B00918011 /* Game.swift in Sources */,
 				03EAF4AE22C0B26B00918011 /* RealmManager.swift in Sources */,

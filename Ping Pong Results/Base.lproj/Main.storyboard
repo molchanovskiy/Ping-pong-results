@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -144,11 +145,108 @@
                             <outlet property="delegate" destination="cOg-f1-ylu" id="0qN-dM-6Zc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="BeB-fm-eI6"/>
+                    <navigationItem key="navigationItem" id="BeB-fm-eI6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="h9e-Vn-hg5">
+                            <connections>
+                                <segue destination="G5p-6X-cgS" kind="show" identifier="to_add_game_segue" id="GES-LH-jCZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xzj-8q-qaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1276.8115942028987" y="-287.27678571428572"/>
+        </scene>
+        <!--Add New Game-->
+        <scene sceneID="hff-7U-Mzf">
+            <objects>
+                <viewController storyboardIdentifier="AddGameViewController" title="Add New Game" id="G5p-6X-cgS" customClass="AddGameViewController" customModule="Ping_Pong_Results" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hNv-ef-Q4Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOf-cc-xjC">
+                                <rect key="frame" x="20" y="108" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 2 Score" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sIB-kO-XlQ">
+                                <rect key="frame" x="20" y="308" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="G5p-6X-cgS" id="yTi-vP-O72"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBE-FD-IEN">
+                                <rect key="frame" x="20" y="243" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 1 Score" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="spL-D8-ipR">
+                                <rect key="frame" x="20" y="173" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="G5p-6X-cgS" id="ygf-gj-0Q9"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 1 Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MQP-11-sUH" customClass="SearchTextField" customModule="SearchTextField">
+                                <rect key="frame" x="20" y="134" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="G5p-6X-cgS" id="Vuo-b7-BUR"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 2 Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uls-J7-xxJ" customClass="SearchTextField" customModule="SearchTextField">
+                                <rect key="frame" x="20" y="269" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="G5p-6X-cgS" id="YfC-wM-Ug9"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JOf-cc-xjC" firstAttribute="leading" secondItem="Jyj-vE-hBM" secondAttribute="leading" constant="20" id="Cs7-ST-DKn"/>
+                            <constraint firstItem="sIB-kO-XlQ" firstAttribute="leading" secondItem="Jyj-vE-hBM" secondAttribute="leading" constant="20" id="Kjt-Zr-hNM"/>
+                            <constraint firstItem="jBE-FD-IEN" firstAttribute="leading" secondItem="Jyj-vE-hBM" secondAttribute="leading" constant="20" id="LtN-dx-Ldn"/>
+                            <constraint firstItem="Jyj-vE-hBM" firstAttribute="trailing" secondItem="MQP-11-sUH" secondAttribute="trailing" constant="20" id="MbA-7G-os3"/>
+                            <constraint firstItem="Jyj-vE-hBM" firstAttribute="trailing" secondItem="uls-J7-xxJ" secondAttribute="trailing" constant="20" id="RM3-yx-QpZ"/>
+                            <constraint firstItem="jBE-FD-IEN" firstAttribute="top" secondItem="spL-D8-ipR" secondAttribute="bottom" constant="40" id="Tzu-fr-gEQ"/>
+                            <constraint firstItem="uls-J7-xxJ" firstAttribute="leading" secondItem="Jyj-vE-hBM" secondAttribute="leading" constant="20" id="VmK-HV-Y7K"/>
+                            <constraint firstItem="spL-D8-ipR" firstAttribute="top" secondItem="MQP-11-sUH" secondAttribute="bottom" constant="9" id="W05-ia-Ivu"/>
+                            <constraint firstItem="Jyj-vE-hBM" firstAttribute="trailing" secondItem="jBE-FD-IEN" secondAttribute="trailing" constant="20" id="cwv-Es-mDz"/>
+                            <constraint firstItem="MQP-11-sUH" firstAttribute="leading" secondItem="Jyj-vE-hBM" secondAttribute="leading" constant="20" id="gjx-2K-Rg5"/>
+                            <constraint firstItem="sIB-kO-XlQ" firstAttribute="top" secondItem="uls-J7-xxJ" secondAttribute="bottom" constant="9" id="hJ7-DJ-7qq"/>
+                            <constraint firstItem="uls-J7-xxJ" firstAttribute="top" secondItem="jBE-FD-IEN" secondAttribute="bottom" constant="5" id="hoA-rV-w2B"/>
+                            <constraint firstItem="spL-D8-ipR" firstAttribute="leading" secondItem="Jyj-vE-hBM" secondAttribute="leading" constant="20" id="oJd-jC-JlH"/>
+                            <constraint firstItem="Jyj-vE-hBM" firstAttribute="trailing" secondItem="JOf-cc-xjC" secondAttribute="trailing" constant="20" id="ow8-bh-9po"/>
+                            <constraint firstItem="JOf-cc-xjC" firstAttribute="top" secondItem="Jyj-vE-hBM" secondAttribute="top" constant="20" id="qBy-9N-OZu"/>
+                            <constraint firstItem="MQP-11-sUH" firstAttribute="top" secondItem="JOf-cc-xjC" secondAttribute="bottom" constant="5" id="rOX-T7-eme"/>
+                            <constraint firstItem="Jyj-vE-hBM" firstAttribute="trailing" secondItem="sIB-kO-XlQ" secondAttribute="trailing" constant="20" id="yQU-Iw-eNK"/>
+                            <constraint firstItem="Jyj-vE-hBM" firstAttribute="trailing" secondItem="spL-D8-ipR" secondAttribute="trailing" constant="20" id="z1g-j3-Ivm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jyj-vE-hBM"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtPlayer1Name" destination="MQP-11-sUH" id="LO0-Jp-MDz"/>
+                        <outlet property="txtPlayer1Score" destination="spL-D8-ipR" id="0RP-AE-0UN"/>
+                        <outlet property="txtPlayer2Name" destination="uls-J7-xxJ" id="D53-D6-BnH"/>
+                        <outlet property="txtPlayer2Score" destination="sIB-kO-XlQ" id="2v1-5c-n7s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sOy-h4-5lm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2052" y="-287"/>
         </scene>
         <!--Players-->
         <scene sceneID="un9-tg-2RQ">
