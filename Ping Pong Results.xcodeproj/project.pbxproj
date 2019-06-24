@@ -11,15 +11,21 @@
 		03EAF49D22C0ADA800918011 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03EAF49B22C0ADA800918011 /* Main.storyboard */; };
 		03EAF49F22C0ADA900918011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03EAF49E22C0ADA900918011 /* Assets.xcassets */; };
 		03EAF4A222C0ADAA00918011 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03EAF4A022C0ADA900918011 /* LaunchScreen.storyboard */; };
+		03EAF4AE22C0B26B00918011 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4AD22C0B26B00918011 /* RealmManager.swift */; };
+		CE519DD2061F79083053E43B /* Pods_Ping_Pong_Results.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEF270EB6063BFCE5F7F452 /* Pods_Ping_Pong_Results.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0123C4F44708FF738809EAB1 /* Pods-Ping Pong Results.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ping Pong Results.debug.xcconfig"; path = "Target Support Files/Pods-Ping Pong Results/Pods-Ping Pong Results.debug.xcconfig"; sourceTree = "<group>"; };
 		03EAF49422C0ADA800918011 /* Ping Pong Results.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ping Pong Results.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03EAF49722C0ADA800918011 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03EAF49C22C0ADA800918011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03EAF49E22C0ADA900918011 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03EAF4A122C0ADA900918011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03EAF4A322C0ADAA00918011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03EAF4AD22C0B26B00918011 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		7DEF270EB6063BFCE5F7F452 /* Pods_Ping_Pong_Results.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ping_Pong_Results.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC75B8918D1400E3B1C75EE0 /* Pods-Ping Pong Results.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ping Pong Results.release.xcconfig"; path = "Target Support Files/Pods-Ping Pong Results/Pods-Ping Pong Results.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE519DD2061F79083053E43B /* Pods_Ping_Pong_Results.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +45,8 @@
 			children = (
 				03EAF49622C0ADA800918011 /* Ping Pong Results */,
 				03EAF49522C0ADA800918011 /* Products */,
+				3B29C5DD4188C723CCE26A51 /* Pods */,
+				2D500651E838489E7C7E9730 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +64,7 @@
 				03EAF49722C0ADA800918011 /* AppDelegate.swift */,
 				03EAF49B22C0ADA800918011 /* Main.storyboard */,
 				03EAF4AA22C0ADE000918011 /* ViewControllers */,
+				03EAF4AC22C0B25700918011 /* Managers */,
 				03EAF4A922C0ADE000918011 /* Models */,
 				03EAF4AB22C0ADE000918011 /* Resources */,
 				03EAF49E22C0ADA900918011 /* Assets.xcassets */,
@@ -85,6 +95,31 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		03EAF4AC22C0B25700918011 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				03EAF4AD22C0B26B00918011 /* RealmManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		2D500651E838489E7C7E9730 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DEF270EB6063BFCE5F7F452 /* Pods_Ping_Pong_Results.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B29C5DD4188C723CCE26A51 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0123C4F44708FF738809EAB1 /* Pods-Ping Pong Results.debug.xcconfig */,
+				CC75B8918D1400E3B1C75EE0 /* Pods-Ping Pong Results.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -92,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03EAF4A622C0ADAA00918011 /* Build configuration list for PBXNativeTarget "Ping Pong Results" */;
 			buildPhases = (
+				1AA580570245BCDD7E409D0D /* [CP] Check Pods Manifest.lock */,
 				03EAF49022C0ADA800918011 /* Sources */,
 				03EAF49122C0ADA800918011 /* Frameworks */,
 				03EAF49222C0ADA800918011 /* Resources */,
+				CE05645F8EF1EAB8D06A862E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,12 +188,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1AA580570245BCDD7E409D0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ping Pong Results-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE05645F8EF1EAB8D06A862E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ping Pong Results/Pods-Ping Pong Results-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ping Pong Results/Pods-Ping Pong Results-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		03EAF49022C0ADA800918011 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				03EAF49822C0ADA800918011 /* AppDelegate.swift in Sources */,
+				03EAF4AE22C0B26B00918011 /* RealmManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +389,7 @@
 		};
 		03EAF4A722C0ADAA00918011 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0123C4F44708FF738809EAB1 /* Pods-Ping Pong Results.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -318,6 +408,7 @@
 		};
 		03EAF4A822C0ADAA00918011 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC75B8918D1400E3B1C75EE0 /* Pods-Ping Pong Results.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
