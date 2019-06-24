@@ -5,6 +5,7 @@
 [![Pod Platforms](https://img.shields.io/cocoapods/p/Iconic.svg)](https://cocoapods.org/pods/Iconic)
 
 Ping Pong Results it is simple application for saving and displaying ping pong game results and player ranks.
+It is using realm database, realm server to sync data and manage users.
 
 ## How to setup and run?
 
