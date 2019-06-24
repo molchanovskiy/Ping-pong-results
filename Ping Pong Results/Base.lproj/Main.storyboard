@@ -27,11 +27,11 @@
             </objects>
             <point key="canvasLocation" x="-550" y="37"/>
         </scene>
-        <!--Item 1-->
+        <!--Games-->
         <scene sceneID="ZRp-LD-pux">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="esg-Ps-TU2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="ARf-Zf-Fxg"/>
+                    <tabBarItem key="tabBarItem" title="Games" id="ARf-Zf-Fxg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4am-BJ-gTG">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -46,14 +46,19 @@
             </objects>
             <point key="canvasLocation" x="366.66666666666669" y="-287.27678571428572"/>
         </scene>
-        <!--Games-->
+        <!--Games Table View Controller-->
         <scene sceneID="w71-qK-XIc">
             <objects>
-                <tableViewController storyboardIdentifier="GamesTableViewController" title="Games" id="cOg-f1-ylu" customClass="GamesTableViewController" customModule="Ping_Pong_Results" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="GamesTableViewController" id="cOg-f1-ylu" customClass="GamesTableViewController" customModule="Ping_Pong_Results" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yAt-kE-Wd2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Jn4-xA-Y6p">
+                            <rect key="frame" x="0.0" y="72" width="414" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameTableViewCell" id="Lcn-Pg-k3z" customClass="GameTableViewCell" customModule="Ping_Pong_Results" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
@@ -75,11 +80,11 @@
             </objects>
             <point key="canvasLocation" x="1277" y="-287"/>
         </scene>
-        <!--Item 2-->
+        <!--Players-->
         <scene sceneID="un9-tg-2RQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XaR-wB-Jcn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Dij-ne-QEV"/>
+                    <tabBarItem key="tabBarItem" title="Players" id="Dij-ne-QEV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6qX-Tl-dgr">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -94,14 +99,19 @@
             </objects>
             <point key="canvasLocation" x="366.66666666666669" y="359.59821428571428"/>
         </scene>
-        <!--Players-->
+        <!--Players Table View Controller-->
         <scene sceneID="1Fm-bU-Ds5">
             <objects>
-                <tableViewController storyboardIdentifier="PlayersTableViewController" title="Players" id="5bL-s7-4fl" customClass="PlayersTableViewController" customModule="Ping_Pong_Results" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PlayersTableViewController" id="5bL-s7-4fl" customClass="PlayersTableViewController" customModule="Ping_Pong_Results" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ShJ-T8-diF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="kDP-9r-Lse">
+                            <rect key="frame" x="0.0" y="72" width="414" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlayerTableViewCell" id="Ux9-dU-d43" customClass="PlayerTableViewCell" customModule="Ping_Pong_Results" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>

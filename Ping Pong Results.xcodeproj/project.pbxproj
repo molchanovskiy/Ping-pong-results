@@ -21,6 +21,8 @@
 		03EAF4D222C0C46F00918011 /* GamesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4D122C0C46F00918011 /* GamesTableViewController.swift */; };
 		03EAF4D422C0C4B100918011 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4D322C0C4B100918011 /* GameTableViewCell.swift */; };
 		03EAF4D622C0C4BD00918011 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4D522C0C4BD00918011 /* PlayerTableViewCell.swift */; };
+		03EAF4DA22C0C5C100918011 /* NSObjectAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4D922C0C5C100918011 /* NSObjectAdditions.swift */; };
+		03EAF4DC22C0C72900918011 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4DB22C0C72900918011 /* AppManager.swift */; };
 		B5B2067904CAAB50FEC2DE5A /* Pods_Ping_Pong_ResultsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB70942F0AE39BBD13A36BD1 /* Pods_Ping_Pong_ResultsTests.framework */; };
 		CE519DD2061F79083053E43B /* Pods_Ping_Pong_Results.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEF270EB6063BFCE5F7F452 /* Pods_Ping_Pong_Results.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		03EAF4D122C0C46F00918011 /* GamesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesTableViewController.swift; sourceTree = "<group>"; };
 		03EAF4D322C0C4B100918011 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 		03EAF4D522C0C4BD00918011 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
+		03EAF4D922C0C5C100918011 /* NSObjectAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectAdditions.swift; sourceTree = "<group>"; };
+		03EAF4DB22C0C72900918011 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		163AB9283CB4BE40103B33B2 /* Pods-Ping Pong ResultsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ping Pong ResultsTests.release.xcconfig"; path = "Target Support Files/Pods-Ping Pong ResultsTests/Pods-Ping Pong ResultsTests.release.xcconfig"; sourceTree = "<group>"; };
 		7DEF270EB6063BFCE5F7F452 /* Pods_Ping_Pong_Results.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ping_Pong_Results.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		951F6276930A1894325C40AE /* Pods-Ping Pong ResultsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ping Pong ResultsTests.debug.xcconfig"; path = "Target Support Files/Pods-Ping Pong ResultsTests/Pods-Ping Pong ResultsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,7 +113,7 @@
 				03EAF4C822C0C3C300918011 /* ViewControllers */,
 				03EAF4AC22C0B25700918011 /* Managers */,
 				03EAF4A922C0ADE000918011 /* Models */,
-				03EAF4AB22C0ADE000918011 /* Resources */,
+				03EAF4D822C0C5AB00918011 /* Extensions */,
 				03EAF49E22C0ADA900918011 /* Assets.xcassets */,
 				03EAF4A022C0ADA900918011 /* LaunchScreen.storyboard */,
 				03EAF4A322C0ADAA00918011 /* Info.plist */,
@@ -125,16 +129,10 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		03EAF4AB22C0ADE000918011 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		03EAF4AC22C0B25700918011 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				03EAF4DB22C0C72900918011 /* AppManager.swift */,
 				03EAF4AD22C0B26B00918011 /* RealmManager.swift */,
 			);
 			path = Managers;
@@ -176,6 +174,14 @@
 				03EAF4D522C0C4BD00918011 /* PlayerTableViewCell.swift */,
 			);
 			path = "Players View Controller";
+			sourceTree = "<group>";
+		};
+		03EAF4D822C0C5AB00918011 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				03EAF4D922C0C5C100918011 /* NSObjectAdditions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2D500651E838489E7C7E9730 /* Frameworks */ = {
@@ -399,8 +405,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				03EAF4D422C0C4B100918011 /* GameTableViewCell.swift in Sources */,
+				03EAF4DC22C0C72900918011 /* AppManager.swift in Sources */,
 				03EAF4CA22C0C3D500918011 /* TabBarViewController.swift in Sources */,
 				03EAF4D222C0C46F00918011 /* GamesTableViewController.swift in Sources */,
+				03EAF4DA22C0C5C100918011 /* NSObjectAdditions.swift in Sources */,
 				03EAF4D022C0C45200918011 /* PlayersTableViewController.swift in Sources */,
 				03EAF4D622C0C4BD00918011 /* PlayerTableViewCell.swift in Sources */,
 				03EAF49822C0ADA800918011 /* AppDelegate.swift in Sources */,

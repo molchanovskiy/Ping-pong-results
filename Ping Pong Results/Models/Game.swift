@@ -21,7 +21,6 @@ class Game: Object {
 	
 	// MARK: - Initialization
 	
-	
 	/**
 	Iinitializes an Game object.
 	
@@ -45,6 +44,8 @@ class Game: Object {
 			secondPlayer.incrementTotalScore(scoreType: .win)
 			firstPlayer.incrementTotalScore(scoreType: .lose)
 		}
+		firstPlayer.incrementPoints(points: firstPlayerScore)
+		secondPlayer.incrementPoints(points: secondPlayerScore)
 	}
 }
 
@@ -58,6 +59,7 @@ class Player: Object {
 	// MARK: - Variables
 	
 	@objc dynamic var name = ""
+	@objc dynamic var points = 0
 	@objc dynamic var totalWins = 0
 	@objc dynamic var totalLosses = 0
 	
@@ -81,13 +83,21 @@ class Player: Object {
 	- parameter scoreType: score type .win in case of win score, .lose in case of lose score
 	- parameter score: score to add totalWins or totalLosses variables
 	*/
-	public func incrementTotalScore(scoreType:PlayerScore) {
+	func incrementTotalScore(scoreType:PlayerScore) {
 		switch scoreType {
 		case .win:
 			totalWins = totalWins + 1
 		case .lose:
 			totalLosses = totalLosses + 1
 		}
-		
+	}
+	
+	/**
+	Increments total player points.
+	
+	- parameter points: points to add points variable
+	*/
+	func incrementPoints(points:Int) {
+		self.points = self.points + points
 	}
 }
