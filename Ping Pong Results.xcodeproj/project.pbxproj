@@ -12,8 +12,28 @@
 		03EAF49F22C0ADA900918011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03EAF49E22C0ADA900918011 /* Assets.xcassets */; };
 		03EAF4A222C0ADAA00918011 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03EAF4A022C0ADA900918011 /* LaunchScreen.storyboard */; };
 		03EAF4AE22C0B26B00918011 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4AD22C0B26B00918011 /* RealmManager.swift */; };
+		03EAF4B022C0B79B00918011 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4AF22C0B79B00918011 /* Game.swift */; };
+		03EAF4B822C0BCCD00918011 /* Ping_Pong_ResultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4B722C0BCCD00918011 /* Ping_Pong_ResultsTests.swift */; };
+		03EAF4C322C0BFA600918011 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4AF22C0B79B00918011 /* Game.swift */; };
+		03EAF4C522C0C05300918011 /* unit_game_player_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4C422C0C05300918011 /* unit_game_player_test.swift */; };
+		03EAF4CA22C0C3D500918011 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4C922C0C3D500918011 /* TabBarViewController.swift */; };
+		03EAF4D022C0C45200918011 /* PlayersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4CF22C0C45200918011 /* PlayersTableViewController.swift */; };
+		03EAF4D222C0C46F00918011 /* GamesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4D122C0C46F00918011 /* GamesTableViewController.swift */; };
+		03EAF4D422C0C4B100918011 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4D322C0C4B100918011 /* GameTableViewCell.swift */; };
+		03EAF4D622C0C4BD00918011 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EAF4D522C0C4BD00918011 /* PlayerTableViewCell.swift */; };
+		B5B2067904CAAB50FEC2DE5A /* Pods_Ping_Pong_ResultsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB70942F0AE39BBD13A36BD1 /* Pods_Ping_Pong_ResultsTests.framework */; };
 		CE519DD2061F79083053E43B /* Pods_Ping_Pong_Results.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DEF270EB6063BFCE5F7F452 /* Pods_Ping_Pong_Results.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03EAF4BA22C0BCCD00918011 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03EAF48C22C0ADA800918011 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03EAF49322C0ADA800918011;
+			remoteInfo = "Ping Pong Results";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0123C4F44708FF738809EAB1 /* Pods-Ping Pong Results.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ping Pong Results.debug.xcconfig"; path = "Target Support Files/Pods-Ping Pong Results/Pods-Ping Pong Results.debug.xcconfig"; sourceTree = "<group>"; };
@@ -24,7 +44,20 @@
 		03EAF4A122C0ADA900918011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03EAF4A322C0ADAA00918011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03EAF4AD22C0B26B00918011 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		03EAF4AF22C0B79B00918011 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		03EAF4B522C0BCCD00918011 /* Ping Pong ResultsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ping Pong ResultsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03EAF4B722C0BCCD00918011 /* Ping_Pong_ResultsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ping_Pong_ResultsTests.swift; sourceTree = "<group>"; };
+		03EAF4B922C0BCCD00918011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03EAF4C422C0C05300918011 /* unit_game_player_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unit_game_player_test.swift; sourceTree = "<group>"; };
+		03EAF4C922C0C3D500918011 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		03EAF4CF22C0C45200918011 /* PlayersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersTableViewController.swift; sourceTree = "<group>"; };
+		03EAF4D122C0C46F00918011 /* GamesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesTableViewController.swift; sourceTree = "<group>"; };
+		03EAF4D322C0C4B100918011 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
+		03EAF4D522C0C4BD00918011 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
+		163AB9283CB4BE40103B33B2 /* Pods-Ping Pong ResultsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ping Pong ResultsTests.release.xcconfig"; path = "Target Support Files/Pods-Ping Pong ResultsTests/Pods-Ping Pong ResultsTests.release.xcconfig"; sourceTree = "<group>"; };
 		7DEF270EB6063BFCE5F7F452 /* Pods_Ping_Pong_Results.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ping_Pong_Results.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		951F6276930A1894325C40AE /* Pods-Ping Pong ResultsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ping Pong ResultsTests.debug.xcconfig"; path = "Target Support Files/Pods-Ping Pong ResultsTests/Pods-Ping Pong ResultsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AB70942F0AE39BBD13A36BD1 /* Pods_Ping_Pong_ResultsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ping_Pong_ResultsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC75B8918D1400E3B1C75EE0 /* Pods-Ping Pong Results.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ping Pong Results.release.xcconfig"; path = "Target Support Files/Pods-Ping Pong Results/Pods-Ping Pong Results.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -37,6 +70,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		03EAF4B222C0BCCD00918011 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5B2067904CAAB50FEC2DE5A /* Pods_Ping_Pong_ResultsTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -44,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				03EAF49622C0ADA800918011 /* Ping Pong Results */,
+				03EAF4B622C0BCCD00918011 /* Ping Pong ResultsTests */,
 				03EAF49522C0ADA800918011 /* Products */,
 				3B29C5DD4188C723CCE26A51 /* Pods */,
 				2D500651E838489E7C7E9730 /* Frameworks */,
@@ -54,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				03EAF49422C0ADA800918011 /* Ping Pong Results.app */,
+				03EAF4B522C0BCCD00918011 /* Ping Pong ResultsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,7 +106,7 @@
 			children = (
 				03EAF49722C0ADA800918011 /* AppDelegate.swift */,
 				03EAF49B22C0ADA800918011 /* Main.storyboard */,
-				03EAF4AA22C0ADE000918011 /* ViewControllers */,
+				03EAF4C822C0C3C300918011 /* ViewControllers */,
 				03EAF4AC22C0B25700918011 /* Managers */,
 				03EAF4A922C0ADE000918011 /* Models */,
 				03EAF4AB22C0ADE000918011 /* Resources */,
@@ -77,15 +120,9 @@
 		03EAF4A922C0ADE000918011 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				03EAF4AF22C0B79B00918011 /* Game.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		03EAF4AA22C0ADE000918011 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		03EAF4AB22C0ADE000918011 /* Resources */ = {
@@ -103,10 +140,49 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		03EAF4B622C0BCCD00918011 /* Ping Pong ResultsTests */ = {
+			isa = PBXGroup;
+			children = (
+				03EAF4B722C0BCCD00918011 /* Ping_Pong_ResultsTests.swift */,
+				03EAF4C422C0C05300918011 /* unit_game_player_test.swift */,
+				03EAF4B922C0BCCD00918011 /* Info.plist */,
+			);
+			path = "Ping Pong ResultsTests";
+			sourceTree = "<group>";
+		};
+		03EAF4C822C0C3C300918011 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				03EAF4CB22C0C41C00918011 /* Games View Controller */,
+				03EAF4CE22C0C43500918011 /* Players View Controller */,
+				03EAF4C922C0C3D500918011 /* TabBarViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		03EAF4CB22C0C41C00918011 /* Games View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				03EAF4D122C0C46F00918011 /* GamesTableViewController.swift */,
+				03EAF4D322C0C4B100918011 /* GameTableViewCell.swift */,
+			);
+			path = "Games View Controller";
+			sourceTree = "<group>";
+		};
+		03EAF4CE22C0C43500918011 /* Players View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				03EAF4CF22C0C45200918011 /* PlayersTableViewController.swift */,
+				03EAF4D522C0C4BD00918011 /* PlayerTableViewCell.swift */,
+			);
+			path = "Players View Controller";
+			sourceTree = "<group>";
+		};
 		2D500651E838489E7C7E9730 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				7DEF270EB6063BFCE5F7F452 /* Pods_Ping_Pong_Results.framework */,
+				AB70942F0AE39BBD13A36BD1 /* Pods_Ping_Pong_ResultsTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -116,6 +192,8 @@
 			children = (
 				0123C4F44708FF738809EAB1 /* Pods-Ping Pong Results.debug.xcconfig */,
 				CC75B8918D1400E3B1C75EE0 /* Pods-Ping Pong Results.release.xcconfig */,
+				951F6276930A1894325C40AE /* Pods-Ping Pong ResultsTests.debug.xcconfig */,
+				163AB9283CB4BE40103B33B2 /* Pods-Ping Pong ResultsTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -142,6 +220,26 @@
 			productReference = 03EAF49422C0ADA800918011 /* Ping Pong Results.app */;
 			productType = "com.apple.product-type.application";
 		};
+		03EAF4B422C0BCCD00918011 /* Ping Pong ResultsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03EAF4BC22C0BCCD00918011 /* Build configuration list for PBXNativeTarget "Ping Pong ResultsTests" */;
+			buildPhases = (
+				4D72DF7BF01C4EB04AE75CBF /* [CP] Check Pods Manifest.lock */,
+				03EAF4B122C0BCCD00918011 /* Sources */,
+				03EAF4B222C0BCCD00918011 /* Frameworks */,
+				03EAF4B322C0BCCD00918011 /* Resources */,
+				9A8F01A214D80319643207AE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03EAF4BB22C0BCCD00918011 /* PBXTargetDependency */,
+			);
+			name = "Ping Pong ResultsTests";
+			productName = "Ping Pong ResultsTests";
+			productReference = 03EAF4B522C0BCCD00918011 /* Ping Pong ResultsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -154,6 +252,10 @@
 				TargetAttributes = {
 					03EAF49322C0ADA800918011 = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					03EAF4B422C0BCCD00918011 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 03EAF49322C0ADA800918011;
 					};
 				};
 			};
@@ -171,6 +273,7 @@
 			projectRoot = "";
 			targets = (
 				03EAF49322C0ADA800918011 /* Ping Pong Results */,
+				03EAF4B422C0BCCD00918011 /* Ping Pong ResultsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -183,6 +286,13 @@
 				03EAF4A222C0ADAA00918011 /* LaunchScreen.storyboard in Resources */,
 				03EAF49F22C0ADA900918011 /* Assets.xcassets in Resources */,
 				03EAF49D22C0ADA800918011 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03EAF4B322C0BCCD00918011 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +321,52 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4D72DF7BF01C4EB04AE75CBF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ping Pong ResultsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A8F01A214D80319643207AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ping Pong ResultsTests/Pods-Ping Pong ResultsTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm-iOS12.2/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift-iOS12.2/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ping Pong ResultsTests/Pods-Ping Pong ResultsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CE05645F8EF1EAB8D06A862E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,15 +376,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Ping Pong Results/Pods-Ping Pong Results-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm-iOS11.0/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift-iOS11.0/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
@@ -244,12 +398,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03EAF4D422C0C4B100918011 /* GameTableViewCell.swift in Sources */,
+				03EAF4CA22C0C3D500918011 /* TabBarViewController.swift in Sources */,
+				03EAF4D222C0C46F00918011 /* GamesTableViewController.swift in Sources */,
+				03EAF4D022C0C45200918011 /* PlayersTableViewController.swift in Sources */,
+				03EAF4D622C0C4BD00918011 /* PlayerTableViewCell.swift in Sources */,
 				03EAF49822C0ADA800918011 /* AppDelegate.swift in Sources */,
+				03EAF4B022C0B79B00918011 /* Game.swift in Sources */,
 				03EAF4AE22C0B26B00918011 /* RealmManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		03EAF4B122C0BCCD00918011 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03EAF4B822C0BCCD00918011 /* Ping_Pong_ResultsTests.swift in Sources */,
+				03EAF4C322C0BFA600918011 /* Game.swift in Sources */,
+				03EAF4C522C0C05300918011 /* unit_game_player_test.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03EAF4BB22C0BCCD00918011 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03EAF49322C0ADA800918011 /* Ping Pong Results */;
+			targetProxy = 03EAF4BA22C0BCCD00918011 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		03EAF49B22C0ADA800918011 /* Main.storyboard */ = {
@@ -425,6 +603,48 @@
 			};
 			name = Release;
 		};
+		03EAF4BD22C0BCCD00918011 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 951F6276930A1894325C40AE /* Pods-Ping Pong ResultsTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V6ANQ363Z2;
+				INFOPLIST_FILE = "Ping Pong ResultsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "TS.Ping-Pong-ResultsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ping Pong Results.app/Ping Pong Results";
+			};
+			name = Debug;
+		};
+		03EAF4BE22C0BCCD00918011 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 163AB9283CB4BE40103B33B2 /* Pods-Ping Pong ResultsTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V6ANQ363Z2;
+				INFOPLIST_FILE = "Ping Pong ResultsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "TS.Ping-Pong-ResultsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ping Pong Results.app/Ping Pong Results";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -442,6 +662,15 @@
 			buildConfigurations = (
 				03EAF4A722C0ADAA00918011 /* Debug */,
 				03EAF4A822C0ADAA00918011 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03EAF4BC22C0BCCD00918011 /* Build configuration list for PBXNativeTarget "Ping Pong ResultsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03EAF4BD22C0BCCD00918011 /* Debug */,
+				03EAF4BE22C0BCCD00918011 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

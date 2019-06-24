@@ -1,24 +1,25 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '11.0'
 
+def shared_pods
+	# RealmSwift
+	# ==========
+	# Source:     https://github.com/realm/realm-cocoa
+	# Purpose:    Used to store objects in local db, all our djambo items, and local djambo items, stored with realm.
+	pod 'RealmSwift', '3.16.2'
+end
+
 target 'Ping Pong Results' do
-    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-    use_frameworks!
-    platform :ios, '11.0'
-		
+	# Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+	use_frameworks!
+	platform :ios, '11.0'
+	
 	# ignore all warnings from all pods
 	inhibit_all_warnings!
-		
-    # Kingfisher
-    # ==========
-    # Source:     https://github.com/onevcat/Kingfisher
-    # Purpose:    Used to display remote images from remote url in ListViewCells.
-    pod 'Kingfisher', '5.2.0'
-    
-    # RealmSwift
-    # ==========
-    # Source:     https://github.com/realm/realm-cocoa
-    # Purpose:    Used to store objects in local db, all our djambo items, and local djambo items, stored with realm.
-    pod 'RealmSwift', '3.16.2'
-    
+	shared_pods
+end
+
+target 'Ping Pong ResultsTests' do
+	use_frameworks!
+	shared_pods
 end

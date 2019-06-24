@@ -16,7 +16,7 @@ class RealmManager {
 	static let shared = RealmManager()
 	var realm: Realm = try! Realm()
 	
-	// MARK: - Methods
+	// MARK: - Functions
 	
 	/**
 	Adds an unmanaged object to this Realm.
