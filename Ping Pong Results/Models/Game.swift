@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 
+
 class Game: Object {
 	
 	// MARK: - Variables

@@ -12,7 +12,7 @@ class GamesTableViewController: UITableViewController {
 
 	// MARK: - Variables
 	
-	var games:[Game] = AppManager.shared.getGamesObjects() {
+	var games:[Game] = AppManager.shared.getGameObjects() {
 		didSet {
 			tableView.reloadData()
 		}
@@ -28,7 +28,7 @@ class GamesTableViewController: UITableViewController {
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		games = AppManager.shared.getGamesObjects()
+		games = AppManager.shared.getGameObjects()
 	}
 
     // MARK: - Table view data source

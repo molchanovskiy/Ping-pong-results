@@ -25,11 +25,25 @@ class AppManager {
 	/**
 	Returns Game objects array sorted by date.
 	*/
-	func getGamesObjects() -> [Game] {
+	func getGameObjects() -> [Game] {
 		if let games = RealmManager.shared.getObjectsWith(type: Game.self)?.toArray(ofType: Game.self), games.count > 0 {
 			return games.sorted(by: { (game1, game2) -> Bool in
 				return game1.date > game2.date
 			})
+		} else {
+			return []
+		}
+	}
+	
+	/**
+	Returns favourite Game objects array sorted by date.
+	*/
+	func getFavouriteGameObjects() -> [Game] {
+		let games = getGameObjects().filter { (game) -> Bool in
+			return game.favourite
+		}
+		if games.count > 0 {
+			return games
 		} else {
 			return []
 		}
